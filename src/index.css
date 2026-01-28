@@ -5,6 +5,38 @@
   box-sizing: border-box;
 }
 
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  background-color: rgb(255, 94, 0);
+  margin-bottom: 20px;
+}
+
+.navbar ul, a {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px 30px;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: rgb(255, 47, 0);
+}
+
+
 /* contenitore card */
 .container-prodotto {
   width: 90%;
