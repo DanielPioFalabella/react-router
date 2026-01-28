@@ -244,14 +244,15 @@ const ListaProdotti = () => {
 
     return (
         <>
-            <div className="card-prodotto">
+            <div className="container-prodotto">
                 {listaProdotti.map((prodotto) => (
-                    <div className="text-prodotto" key={prodotto.id}>
+                    <div className="card-prodotto" key={prodotto.id}>
                         <h3>{prodotto.title}</h3>
-                        <p>{prodotto.price}</p>
+                        <img src={prodotto.image} alt={prodotto.title} />
+                        <p className="prezzo-prodotto">{prodotto.price}</p>
                         <p>{prodotto.description}</p>
                         <p>{prodotto.category}</p>
-                        <img src={prodotto.image} alt={prodotto.title} />
+                        
                     </div>
                 ))}
             </div>
