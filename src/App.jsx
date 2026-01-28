@@ -7,13 +7,12 @@ import Prodotti from "./pages/Prodotti"
 const App = () => {
   return (
     <>
-      <h1>si parte!!!</h1>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
-            <Route path="/homepage" element={<Homepage />}></Route>
-            <Route path="/chisiamo" element={<ChiSiamo />}></Route>
-            <Route path="/prodotti" element={<Prodotti />}></Route>
+            <Route index element={<Homepage />}/>
+            <Route path="chisiamo" element={<ChiSiamo />}/>
+            <Route path="prodotti" element={<Prodotti />}/>
           </Route>
         </Routes>
       </BrowserRouter>
