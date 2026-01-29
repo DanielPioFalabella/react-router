@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage"
 import ChiSiamo from "./pages/ChiSiamo"
 import Prodotti from "./pages/Prodotti"
 import NotFoundPage from "./pages/NotFoundPage";
+import DettaglioProdottoSingolo from "./components/DettaglioProdottoSingolo";
 
 const App = () => {
   return (
@@ -11,11 +12,14 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
-            <Route index element={<Homepage />}/>
-            <Route path="/chisiamo" element={<ChiSiamo />}/>
-            <Route path="/prodotti" element={<Prodotti />}/>
+            <Route index element={<Homepage />} />
+            <Route path="/chisiamo" element={<ChiSiamo />} />
+            <Route path="/prodotti">
+              <Route index element={<Prodotti />} />
+              <Route path=":id" element={<DettaglioProdottoSingolo />} />
+            </Route>
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
-          <Route path="*" element={<NotFoundPage />}/>
         </Routes>
       </BrowserRouter>
     </>
