@@ -27,7 +27,7 @@ const DettaglioProdottoSingolo = () => {
             <div className="container-prodotto-singolo">
                 <h3 className="titolo-prodotto">{prodotto.title}</h3>
                 <img src={prodotto.image} alt={prodotto.title} />
-                <p className="prezzo-prodotto">€ {prodotto.price},00</p>
+                <p className="prezzo-prodotto">€ {prodotto.price}</p>
                 <p className="description-prodotto">{prodotto.description}</p>
                 <p className="categoria-prodotto">{prodotto.category}</p>
 
