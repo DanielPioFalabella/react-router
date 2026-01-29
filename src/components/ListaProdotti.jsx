@@ -24,7 +24,7 @@ const ListaProdotti = () => {
                     >
                         <h3>{prodotto.title}</h3>
                         <img src={prodotto.image} alt={prodotto.title} />
-                        <p className="prezzo-prodotto">{prodotto.price}</p>
+                        <p className="prezzo-prodotto">€ {prodotto.price}</p>
                         <p>{prodotto.description}</p>
                         <p>{prodotto.category}</p>
                     </Link>
