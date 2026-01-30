@@ -11,7 +11,7 @@ const DettaglioProdottoSingolo = () => {
     const endpoint = "https://fakestoreapi.com/products/";
 
     useEffect(() => {
-        axios.get(`${endpoint}${id}`)
+        axios.get(endpoint + id)
             .then(res => setProdotto(res.data))
             .catch(err => console.log(err, "c'è un errore"))
     }, [id])
